@@ -1,0 +1,56 @@
+.brand-layout1 {
+  position: relative;
+}
+
+.shape-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 0;
+}
+
+.brand-layout2 {
+  max-width: 1260px;
+  margin-left: auto;
+  padding: 70px 50px 70px 90px;
+  clip-path: polygon(calc(0% + 90px) 0%, 100% 0%, 100% 100%, 0% 100%);
+  margin-bottom: -85px;
+}
+
+.brand-layout3 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: -132.5px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+@include xl {
+  .brand-layout1 {
+    background-size: cover;
+    background-position: right bottom;
+  }
+}
+
+
+@include md {
+  .brand-layout1 {
+    background-size: cover;
+    background-position: center bottom;
+  }
+}
+
+@include sm {
+  .brand-layout3,
+  .brand-layout2 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 15px 40px 15px;
+    margin-bottom: 0;
+    clip-path: none;
+  }
+}

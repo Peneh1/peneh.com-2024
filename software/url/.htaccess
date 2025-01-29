@@ -1,0 +1,16 @@
+RewriteEngine On
+    RewriteBase /
+
+#removing spaces
+RewriteCond %{THE_REQUEST} \s/([^%20]*)%20([^\s]*) [NC]
+RewriteRule ^ /%1-%2 [L,NE,R]
+
+RewriteRule "^(p)/([^-]*)-+(.*)$" "/$1/$2 $3" [L,NE,NC]
+#end removing spaces
+
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)(?:/([^/]+)(?:/([^/]+))?)?/?$ index.php?id=$1&oo=$2&name=$3 [L,QSA]

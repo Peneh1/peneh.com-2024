@@ -1,0 +1,74 @@
+/*
+Error: Invalid CSS after "  @if $return": expected "{", was "='em' {"
+        on line 4 of E:/Peneh-Local-Host/htdocs/web/wheelchoice/final/assets/sass/base/_function.scss
+        from line 1 of E:\Peneh-Local-Host\htdocs\web\wheelchoice\final\assets\sass\theme-color3.scss
+
+1: 
+2: // Function For Letter Spacing
+3: @function letter-spacing($psValue, $return: 'em', $fSize: '16') {
+4:   @if $return='em' {
+5:     @return ($psValue) / 1000 + em;
+6:   }
+7: 
+8:   @else {
+9:     @return ($psValue * $fSize) / 1000;
+
+Backtrace:
+E:/Peneh-Local-Host/htdocs/web/wheelchoice/final/assets/sass/base/_function.scss:4
+E:\Peneh-Local-Host\htdocs\web\wheelchoice\final\assets\sass\theme-color3.scss:1
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:331:in `if_directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:234:in `special_directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:209:in `directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:706:in `block_child'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:272:in `function_directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:234:in `special_directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:209:in `directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:321:in `to_tree'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:20:in `render'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/bin/sass:23:in `load'
+C:/Program Files/Adobe/Adobe Dreamweaver 2020/ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  @if $return\": expected \"{\", was \"='em' {\"\A         on line 4 of E:/Peneh-Local-Host/htdocs/web/wheelchoice/final/assets/sass/base/_function.scss\A         from line 1 of E:\Peneh-Local-Host\htdocs\web\wheelchoice\final\assets\sass\theme-color3.scss\A \A 1: \A 2: // Function For Letter Spacing\A 3: @function letter-spacing($psValue, $return: 'em', $fSize: '16') {\A 4:   @if $return='em' {\A 5:     @return ($psValue) / 1000 + em;\A 6:   }\A 7: \A 8:   @else {\A 9:     @return ($psValue * $fSize) / 1000;"; }

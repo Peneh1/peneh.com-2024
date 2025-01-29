@@ -1,0 +1,185 @@
+.counter-list {
+  li:before,
+  .count-number {
+    font-weight: 700;
+    font-family: $title-font;
+    font-size: 72px;
+    line-height: 1;
+  }
+  
+  li {
+    display: inline-block;
+    text-align: center;
+    padding-right: 55px;
+    margin-right: 32px;
+    position: relative;
+
+    &:before {
+      content: ':';
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.vs-code-box {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid $theme-color;
+  background-color: $white-color;
+  font-weight: 600; 
+  padding: 19px 43px;
+  border-radius: 3px;
+  line-height: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: $theme-color;
+    width: 30px;
+    height: 30px;
+    right: -17px;
+    bottom: -17px;
+    transform: rotate(45deg);
+  }
+}
+
+.form-wrap1 {
+  padding: 60px;
+  box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.05);
+}
+
+.form-wrap2 {
+  padding: 60px;
+  box-shadow: 0px 10px 42.75px 2.25px rgba(0, 0, 0, 0.03);
+}
+
+.form-wrap3 {
+  padding: 100px;
+  box-shadow: 0px 15px 42.75px 2.25px rgba(0, 0, 0, 0.05);
+}
+
+.form-wrap5 {
+  padding: 80px;
+}
+
+
+.step-dots {
+  .dot {
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+    margin-right: 6px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      background-color: $theme-color;
+    }
+  }
+}
+
+.steps-wrap {
+  position: relative;
+  overflow: hidden;
+  transition: all ease 0.4s;
+
+  .steps {
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transition: all ease 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    
+    &.complete {
+      left: -100%;
+    }
+    
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
+  }
+
+}
+
+.steps-actions {
+  .vs-btn {
+    padding: 17px 29px;
+  }
+  
+  .step-prev {
+    margin-right: 0;
+    margin-left: 12.5px;
+
+    i {
+      right: auto;
+      left: -12.5px;
+    }
+  }
+}
+
+
+@include ml {
+  .form-wrap5,
+  .form-wrap2{
+    padding: 40px;
+  }
+}
+
+
+
+@include lg {
+  .form-wrap1 {
+    padding: 40px;
+  }
+
+  .form-wrap3 {
+    padding: 60px;
+  }
+
+  .counter-list {
+    li {
+      padding-right: 25px;
+      margin-right: 10px;
+    }
+
+    li::before,
+    .count-number {
+      font-size: 48px;
+    }
+  }
+
+  .vs-code-box.mt-35 {
+    margin-top: 10px;
+  }
+}
+
+@include xs {
+  .form-wrap5,
+  .form-wrap3,
+  .form-wrap2,
+  .form-wrap1 {
+    padding: 40px 20px;
+  }
+}

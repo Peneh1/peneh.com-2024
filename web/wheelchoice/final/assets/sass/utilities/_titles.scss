@@ -1,0 +1,113 @@
+.section-title {
+  margin-bottom: 75px;
+
+  .fa-rotate-90 {
+    display: inline-block;
+  }
+
+  .h1,
+  .h2 {
+    margin-top: -0.3em;
+  }
+}
+
+.sec-divider {
+  width: 100px;
+  height: 4px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: $theme-color;
+  }
+
+  &:after {
+    width: 100%;
+    height: 2px;
+    margin-top: -1px;
+  }
+
+  &:before {
+    height: 4px;
+    width: 25px;
+    margin-top: -2px;
+    animation: divider-ani 5s linear 0s infinite;
+  }
+
+  &.dot-style {
+    width: 160px;
+    height: 8px;
+
+    &:after {
+      height: 1px;
+    }
+
+    &:before {
+      height: 6px;
+      width: 6px;
+      margin: -3px 0 0 -3px;
+      transform: rotate(45deg);
+      left: 50%;
+      animation: none;
+    }
+  }
+}
+
+
+.sec-title {
+  font-size: 60px;
+  font-weight: 800;
+  margin-top: -0.31em;
+}
+
+.inner-title {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 22px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background-color: $theme-color;
+  }
+}
+
+
+@include ml {
+  .sec-title {
+    font-size: 48px;
+  }
+}
+
+
+@include lg {
+  .sec-title {
+    font-size: 36px;
+  }
+
+  .sec-divider {
+    margin-bottom: 15px;
+  }
+}
+
+@include md {
+  .sec-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+}

@@ -1,0 +1,87 @@
+.breadcumb-menu {
+  max-width: 100%;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-right: 13px;
+    padding-right: 19px;
+    list-style: none;
+    position: relative;
+
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '|';
+      position: absolute;
+      right: 0;
+      color: $white-color;
+    }
+  }
+
+  li,
+  a,
+  span {
+    white-space: normal;
+    color: inherit;
+    word-break: break-all;
+    font-weight: 700;
+    
+    i {
+      margin-right: 10px;
+      font-size: 0.8rem;
+      position: relative;
+      top: -1px;
+    }
+
+    &:hover,
+    &.active {
+      color: $theme-color;
+    }
+    
+  }
+}
+
+
+.breadcumb-title {
+  font-weight: 600;
+  font-family: $body-font;
+  margin-bottom: 0.1em;
+  max-width: 1000px;
+  width: 100%;
+}
+
+
+@include lg {
+  .breadcumb-wrapper.pt-175.pb-125 {
+    padding-top: 125px;
+    padding-bottom: 75px;
+  }
+}
+
+
+@include sm {
+  .breadcumb-wrapper.pt-175.pb-125 {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .breadcumb-menu {
+    li,
+    a,
+    span {
+      font-size: 14px;
+    }
+  }
+}

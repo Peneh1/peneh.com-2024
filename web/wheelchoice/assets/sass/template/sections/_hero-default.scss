@@ -1,0 +1,149 @@
+
+.ls-arrow {
+  background-color: rgba(255,255,255,0.5);
+  color: $title-color;
+  border: none;
+  display: inline-block; 
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  @include equal-size(80px);
+  font-size: 20px;
+  z-index: 34;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+
+  &[data-ls-go="next"] {
+    left: auto;
+    right: 200px;
+  }
+
+
+  &:hover {
+    background-color: $white-color;
+    color: $theme-color;
+  }
+
+  &.pos-right { 
+    left: auto;
+    right: 125px;
+    
+    &[data-ls-go="prev"] {
+      top: calc(50% + 48px);
+    }
+    
+    &[data-ls-go="next"] {
+      top: calc(50% - 48px);
+    }
+  }
+}
+
+
+.ls-gradient {
+  background-image: linear-gradient(to right, rgba(0,0,0, 0.50) 30%, rgba(0,0,0,0) 100%);
+}
+
+
+.vs-hero-carousel {
+  &:hover {
+    .ls-arrow {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.ls-btn {
+  .vs-btn {
+
+    &:hover {
+      background-color: $title-color;
+    }
+    
+    &::after {
+      display: none;
+    }
+
+    &.style3 {
+      
+      &:hover {
+        &:before {
+          background-color: $title-color;
+        }
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+@include xl {
+  .ls-arrow {
+    @include equal-size(40px);
+    font-size: 16px;
+    left: 100px;
+
+    &[data-ls-go="next"] {
+      right: 100px;
+    }
+    
+    &.pos-right {
+      right: 50px;
+
+      &[data-ls-go="prev"] {
+        top: calc(50% + 25px);
+      }
+
+      &[data-ls-go="next"] {
+        top: calc(50% - 25px);
+      }
+    }
+  }
+
+  .ls-btn-center .vs-btn {
+    margin-left: -1.9em;
+  }
+}
+
+
+@include lg {
+  .ls-btn-center .vs-btn {
+    margin-left: -3.4em;
+  }
+}
+
+@include md {
+  .ls-btn-center .vs-btn {
+    margin-left: -3.8em;
+  }
+}
+
+@include sm {
+  .ls-btn-center .vs-btn {
+    margin-left: -4.5em;
+  }
+}
+
+
+@include xs {
+  .ls-btn-center,
+  .ls-btn {
+    .vs-btn {
+      padding: 13px 25px;
+      font-size: 12px;
+      i {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        right: -10px;
+        margin-top: -10px;
+      }
+    }
+
+    .vs-btn.style3::before {
+      clip-path: none;
+    }
+  }
+}

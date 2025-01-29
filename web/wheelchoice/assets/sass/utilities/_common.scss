@@ -1,0 +1,45 @@
+.image-scale-hover {
+  overflow: hidden;
+
+  img {
+    transition: all ease 0.4s;
+    transform: scale(1.001);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+
+.z-index-step1 {
+  position: relative;
+  z-index: 4 !important;
+}
+
+.z-index-common {
+  position: relative;
+  z-index: 3;
+}
+
+
+.media-body {
+  flex: 1;
+}
+
+
+.badge {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  background-color: $title-color;
+  color: $white-color;
+  padding: .35em .55em;
+  border-radius: 50%;
+}

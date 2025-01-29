@@ -1,0 +1,25 @@
+.thumb-post {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  .media-body > a {
+    display: inline-block;
+    margin-bottom: 7px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+  
+  .post-title {
+    margin-bottom: 0;
+    
+    a {
+      color: inherit;
+      line-height: 1.6;
+    }
+  }
+}

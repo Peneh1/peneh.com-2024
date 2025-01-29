@@ -1,0 +1,99 @@
+[
+    {
+        "label": "glob,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob.",
+        "description": "glob.",
+        "detail": "glob.",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "stat",
+        "description": "stat",
+        "isExtraImport": true,
+        "detail": "stat",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "stat",
+        "description": "stat",
+        "isExtraImport": true,
+        "detail": "stat",
+        "documentation": {}
+    },
+    {
+        "label": "is_executable",
+        "kind": 2,
+        "importPath": "logs.info",
+        "description": "logs.info",
+        "peekOfCode": "def is_executable(path):\n    return (os.stat(path)[ST_MODE] & (S_IXUSR | S_IXGRP | S_IXOTH)) != 0\ndef listmodules(arg, dirname, names):\t\n    has_init_py = '__init__.py' in names\n    if has_init_py:\n        for p in sys_path:\n            if dirname[:len(p)] == p:\n                dirname = dirname[len(p):]\n                break\n        if dirname[:1] == '/':",
+        "detail": "logs.info",
+        "documentation": {}
+    },
+    {
+        "label": "listmodules",
+        "kind": 2,
+        "importPath": "logs.info",
+        "description": "logs.info",
+        "peekOfCode": "def listmodules(arg, dirname, names):\t\n    has_init_py = '__init__.py' in names\n    if has_init_py:\n        for p in sys_path:\n            if dirname[:len(p)] == p:\n                dirname = dirname[len(p):]\n                break\n        if dirname[:1] == '/':\n            dirname = dirname[1:]\n        if dirname[:4] == 'test':",
+        "detail": "logs.info",
+        "documentation": {}
+    },
+    {
+        "label": "lang2css",
+        "kind": 5,
+        "importPath": "logs.info",
+        "description": "logs.info",
+        "peekOfCode": "lang2css = {\n    '0': '''\n    th        {font:bold 16px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#fff; background-color:#0A328C; padding:5px 0; }\n    td        {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; line-height:1.5em; vertical-align:top;}\n    .leftcol  {width:35%; background-color:#E9F0FA; padding-left:5px;}\n    .rightcol {width:65% }\n    a:link    {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#002276; text-decoration: none;}\n    a:visited {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#002276; text-decoration: none;}\n    a:active  {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#000; text-decoration: underline;}\n    a:hover   {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#000; text-decoration: underline;}",
+        "detail": "logs.info",
+        "documentation": {}
+    },
+    {
+        "label": "installedmodules",
+        "kind": 5,
+        "importPath": "logs.info",
+        "description": "logs.info",
+        "peekOfCode": "installedmodules = {}\ndef is_executable(path):\n    return (os.stat(path)[ST_MODE] & (S_IXUSR | S_IXGRP | S_IXOTH)) != 0\ndef listmodules(arg, dirname, names):\t\n    has_init_py = '__init__.py' in names\n    if has_init_py:\n        for p in sys_path:\n            if dirname[:len(p)] == p:\n                dirname = dirname[len(p):]\n                break",
+        "detail": "logs.info",
+        "documentation": {}
+    },
+    {
+        "label": "is_executable",
+        "kind": 2,
+        "importPath": "web.eStudioPhotography.com.logs.info",
+        "description": "web.eStudioPhotography.com.logs.info",
+        "peekOfCode": "def is_executable(path):\n    return (os.stat(path)[ST_MODE] & (S_IXUSR | S_IXGRP | S_IXOTH)) != 0\ndef listmodules(arg, dirname, names):\t\n    has_init_py = '__init__.py' in names\n    if has_init_py:\n        for p in sys_path:\n            if dirname[:len(p)] == p:\n                dirname = dirname[len(p):]\n                break\n        if dirname[:1] == '/':",
+        "detail": "web.eStudioPhotography.com.logs.info",
+        "documentation": {}
+    },
+    {
+        "label": "listmodules",
+        "kind": 2,
+        "importPath": "web.eStudioPhotography.com.logs.info",
+        "description": "web.eStudioPhotography.com.logs.info",
+        "peekOfCode": "def listmodules(arg, dirname, names):\t\n    has_init_py = '__init__.py' in names\n    if has_init_py:\n        for p in sys_path:\n            if dirname[:len(p)] == p:\n                dirname = dirname[len(p):]\n                break\n        if dirname[:1] == '/':\n            dirname = dirname[1:]\n        if dirname[:4] == 'test':",
+        "detail": "web.eStudioPhotography.com.logs.info",
+        "documentation": {}
+    },
+    {
+        "label": "lang2css",
+        "kind": 5,
+        "importPath": "web.eStudioPhotography.com.logs.info",
+        "description": "web.eStudioPhotography.com.logs.info",
+        "peekOfCode": "lang2css = {\n    '0': '''\n    th        {font:bold 16px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#fff; background-color:#0A328C; padding:5px 0; }\n    td        {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; line-height:1.5em; vertical-align:top;}\n    .leftcol  {width:35%; background-color:#E9F0FA; padding-left:5px;}\n    .rightcol {width:65% }\n    a:link    {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#002276; text-decoration: none;}\n    a:visited {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#002276; text-decoration: none;}\n    a:active  {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#000; text-decoration: underline;}\n    a:hover   {font:12px Arial,\"Lucida Grande\",\"Lucida Sans Unicode\",\"Bitstream Vera Sans\",Verdana,Futura,Helvetica,sans-serif; color:#000; text-decoration: underline;}",
+        "detail": "web.eStudioPhotography.com.logs.info",
+        "documentation": {}
+    },
+    {
+        "label": "installedmodules",
+        "kind": 5,
+        "importPath": "web.eStudioPhotography.com.logs.info",
+        "description": "web.eStudioPhotography.com.logs.info",
+        "peekOfCode": "installedmodules = {}\ndef is_executable(path):\n    return (os.stat(path)[ST_MODE] & (S_IXUSR | S_IXGRP | S_IXOTH)) != 0\ndef listmodules(arg, dirname, names):\t\n    has_init_py = '__init__.py' in names\n    if has_init_py:\n        for p in sys_path:\n            if dirname[:len(p)] == p:\n                dirname = dirname[len(p):]\n                break",
+        "detail": "web.eStudioPhotography.com.logs.info",
+        "documentation": {}
+    }
+]

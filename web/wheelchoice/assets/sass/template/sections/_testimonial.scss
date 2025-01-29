@@ -1,0 +1,294 @@
+.testi-shape1 {
+  width: 238px;
+  height: 232px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  opacity: 0.42;
+  position: absolute;
+  left: 10%;
+  top: -30%;
+  transform: rotate(18deg);
+}
+
+
+.author-slide-box {
+  padding: 30px;
+  box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.03);
+  background-color: $white-color;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+
+  &,
+  .author-name,
+  .author-degi {
+    transition: all ease 0.4s;
+  }
+  
+}
+
+.author-slide-box:hover,
+.slick-current.author-slide-box {
+  background-color: $title-color;
+  box-shadow: none;
+  .author-name {
+    color: $white-color;
+  }
+
+  .author-degi {
+    color: $theme-color;
+  }
+}
+
+.testimonial-inner {
+  background-color: $white-color;
+  box-shadow: 0px 3px 100px 0px rgba(0, 0, 0, 0.09);
+}
+
+.testimonial-box {
+  padding: 55px 60px 60px 60px;
+  position: relative;
+
+  .quote {
+    position: absolute;
+    right: 60px;
+    bottom: 50px;
+    color: $title-color;
+    font-size: 5rem;
+    opacity: 0.10;
+  }
+
+  .star-rating {
+    width: 150px;
+    font-size: 22px;
+
+    &::before {
+      letter-spacing: 5px;
+    }
+
+    span {
+      &::before {
+        letter-spacing: 5px;
+      }
+    }
+  }
+  
+}
+
+
+.author-slide-arrow {
+  box-shadow: 0px 3px 100px 0px rgba(0, 0, 0, 0.09);
+  height: 58px;
+  
+  button {
+    background-color: $white-color;
+    border: none;
+
+    &:hover {
+      color: $white-color;
+      background-color: $theme-color;
+    }
+  }
+}
+
+.testimonial-style1 {
+  position: relative;
+  z-index: 3;
+  
+  .quote-icon {
+    position: absolute;
+    font-size: 10rem;
+    opacity: 0.15;
+    right: 0.4em;
+    bottom: 0.3em;
+  }
+
+  .star-rating {
+    font-size: 18px;
+    width: 122px;
+    display: inline-block;
+
+    span:before,
+    &:before {
+      letter-spacing: 5px;
+    }
+  }
+}
+
+.author-pill-box {
+  width: 236px;
+  height: 236px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+
+  .pill-shape {
+    width: 236px;
+    height: 236px;
+    position: absolute;
+    left: 0;
+    bottom: -140px;
+    border-radius: 50%;
+  }
+
+  .author-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 23px;
+    z-index: 1;
+  }
+}
+
+
+.avater-slide {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 2;
+  
+  
+  .slick-list {
+    position: static;
+    overflow: visible;
+  }
+  
+  .slick-track {
+    position: static;
+    transform: none !important;
+  }
+
+  .avater {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    transition: all ease 0.4s;
+    opacity: 0;
+    visibility: visible;
+    z-index: 4;
+    float: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+    &[class*=pos-] {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.pos-1,
+    &.pos-5 {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &.pos-1 {
+      right: 0;
+      top: -80px;
+    }
+
+    &.pos-2 {
+      right: 12px;
+      top: 32px;
+    }
+
+    &.pos-3 {
+      right: 72px;
+      top: 127px;
+    }
+
+    &.pos-4 {
+      right: 182px;
+      top: 148px;
+    }
+
+    &.pos-5 {
+      right: 290px;
+      top: 175px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &.slick-current {
+      border-color: $theme-color;
+    }
+
+  }
+}
+
+.testimonial-layout2 {
+  padding-bottom: 210px;
+}
+
+@include ml {
+  .author-pill-box.mr-135 {
+    margin-right: 50px;
+  }
+}
+
+@include lg {
+  .testimonial-box {
+    padding: 30px 40px 40px 40px;
+  }
+
+  .avater-slide {
+    .avater{
+
+      &.pos-1 {
+        right: -40px;
+        top: -40px;
+      }
+
+      &.pos-2 {
+        right: 12px;
+        top: 95px;
+      }
+      &.pos-3 {
+        right: 94px;
+        top: 135px;
+      }
+      
+    }
+  }
+
+
+}
+
+
+
+@include md {
+  .author-pill-box {
+    width: 200px;
+    height: 200px;
+
+    &.mr-135 {
+      margin-right: 20px;
+    }
+
+    .pill-shape {
+      width: 200px;
+      height: 200px;
+      bottom: -100px;
+    }    
+  }
+
+  .testimonial-style1 .quote-icon {
+    bottom: 0.2em;
+    font-size: 5rem;
+  }
+}
+
+
+@include sm {
+  .testimonial-box {
+    padding: 30px 20px 40px 20px;
+  }
+}

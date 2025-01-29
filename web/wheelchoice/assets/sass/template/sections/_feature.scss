@@ -1,0 +1,50 @@
+.feature-layout1 {
+  background-position: left top;
+}
+
+
+.feature-mark {
+  background-color: rgba($color: #fff, $alpha: 0.80);
+  position: relative;
+  padding: 35px 40px;
+  overflow: hidden;
+  transition: all ease 0.4s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    @include equal-size(100px);
+    background-color: $theme-color;
+    transition: all ease 0.4s;
+    transform: rotate(45deg);
+  }
+  
+
+  &:hover {
+    background-color: $white-color;
+    
+    &::before {
+      right: -57px;
+      top: -57px;
+    }
+  }
+}
+
+
+@include lg {
+  .service-box {
+    padding: 35px 30px 37px 30px;
+  }
+
+  .feature-layout1 {
+    padding-bottom: 150px;
+  }
+}
+
+@include md {
+  .feature-layout1 {
+    padding-bottom: 80px;
+  }
+}

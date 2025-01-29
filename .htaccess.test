@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+
+
+#redirect peneh to https
+RewriteCond %{HTTP_HOST} ^peneh\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.peneh.com/$1 [R,L]
+
+
+
+#redirect all 
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://peneh.com/$1 [R,L]
+</IfModule>
+
+ ErrorDocument 404 /error404.php
+

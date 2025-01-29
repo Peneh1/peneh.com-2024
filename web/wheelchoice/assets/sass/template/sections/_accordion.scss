@@ -1,0 +1,117 @@
+.accordion-box {
+  background-color: $white-color;
+  padding: 22px 0;
+  margin-bottom: 20px;
+
+  &:last-of-type,
+  &:last-child {    
+    .accordion-collapse {
+      border-bottom: none;
+    }
+  }
+
+  .accordion-body {
+    padding: 22px 40px 0 40px;
+    margin-top: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 40px;
+      right: 40px;
+      top: 0;
+      height: 1px;
+      background-color: $theme-color;
+    }
+  }
+
+  .accordion-button {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $title-font;
+    border: none;
+    padding: 0 40px;
+    text-align: left;
+
+    &:not(.collapsed) {
+      color: $title-color;
+      background-color: transparent;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: transparent;
+      outline: none;
+      background-color: transparent;
+    }
+
+
+    &:after {
+      content: '\f067';
+      font-family: $icon-font;
+      width: 30px;
+      height: 30px;
+      font-weight: 300;
+      padding: 0;
+      line-height: 30px;
+      font-size: 14px;
+      text-align: center;
+      background-image: none;
+      background-color: $white-color;
+      color: $theme-color;
+      box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.09);
+      border-radius: 50%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      border-top: 10px solid transparent;
+      border-left: 11px solid $theme-color;
+      border-bottom: 10px solid transparent;
+      opacity: 0;
+      visibility: hidden;
+      transition: all ease 0.4s;
+    }
+
+    &:not(.collapsed) {
+      &:after {
+        content: '\f068';
+        background-color: $theme-color;
+        color: $white-color;
+        background-image: none;
+        transform: rotate(0);
+      }
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+
+  }
+
+
+
+}
+
+
+@include sm {
+  .accordion-box .accordion-button {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .accordion-box .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:before {
+      left: 20px;
+      right: 20px;
+    }
+  }
+}

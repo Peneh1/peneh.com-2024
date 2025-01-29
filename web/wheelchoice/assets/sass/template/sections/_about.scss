@@ -1,0 +1,130 @@
+.vs-about-wrapper {
+  position: relative;
+  
+  .shape1 {
+    opacity: 0.10;
+    @include equal-size(144px);
+    border-radius: 50%;
+    position: absolute;
+    right: 21.5%;
+    top: 17%;
+  }
+}
+
+.about-layout3 {
+  padding-top: 255px;
+}
+
+.about-wrap1 {
+  padding: 0 90px 85px 90px;
+  box-shadow: 0px 50px 76px 4px rgba(0, 0, 0, 0.05);
+}
+
+.list-about {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    position: relative;
+    padding:  12px 0;
+    padding-left: 70px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $title-color;
+
+    &::before {
+      content: '\f00c';
+      font-family: $icon-font;
+      display: inline-block;
+      font-weight: normal;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50%;
+      background-color: $white-color;
+      color: $theme-color;
+    }
+  }
+}
+
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:20px 0;
+}
+
+
+.about-img-box1 {
+  position: relative;
+  padding: 0 80px 80px 80px;
+  z-index: 1;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($theme-color-opacity, 0.3);
+    height: 100%;
+    max-height: 455px;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 165px, 100% 100%, 0% 100%);
+  }
+
+  &:before {
+    background-color: $white-color;
+  }
+}
+
+
+@include ml {
+  .about-img-box1 {
+    padding: 0 40px 40px 40px;
+  }
+  .about-wrap1 {
+    padding: 0 60px 55px 60px;
+  }
+}
+
+
+@include lg {
+  .about-img-box1::before,
+  .about-img-box1::after {
+    max-height: 70%;
+  }
+}
+
+@include md {
+  .about-layout3 {
+    padding-top: 80px;
+  }
+  .about-wrap1 {
+    padding: 0 40px 37px 40px;
+  }
+}
+
+@include xs {
+  .grid-col-2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px 0;
+
+    li {
+      padding-left: 60px;
+    }
+  }
+
+  .about-wrap1 {
+    padding: 0 15px 37px 15px;
+  }
+  
+  .about-img-box1 {
+    padding: 0 20px 20px 20px;
+  }
+}

@@ -1,0 +1,185 @@
+.service-card {
+  text-align: center;
+  position: relative;
+  padding-bottom: 40px;
+
+  .title-box {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 0;
+    z-index: 2;
+    background-color: $white-color;
+    padding: 25px 0;
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 0;
+    box-shadow: 0 5px 37px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .service-img {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      background-color: $black-color;
+      opacity: 0.50;
+      visibility: hidden;
+    }
+  }
+
+  .service-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 38px;
+    margin-top: 50px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .service-text {
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .title-box,
+  .service-content,
+  .service-img:before {
+    transition: all ease 0.4s;
+  }
+
+  &:hover {
+    .service-content {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0.2s;
+      margin-top: 1px;
+    }
+
+    .title-box {
+      opacity: 0;
+      visibility: hidden;
+      margin-bottom: 80px;
+    }
+    
+    .service-img {
+      &::before {
+        height: 100%;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+.service-box {
+  padding: 50px 60px 53px 60px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -80px;
+    bottom: -80px;
+    background-color: $theme-color;
+    width: 81px;
+    height: 81px;
+    transform: rotate(45deg);
+    transition: all ease 0.4s;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    background-color: $white-color;
+    transition: all ease 0.4s;
+  }
+
+  &:hover {
+    &::before {
+      right: -50px;
+      bottom: -50px;
+    }
+  }
+
+
+  &.has-gradient {
+
+    &:before {
+      z-index: 3;
+    }
+
+    .service-content {
+      position: relative;
+      z-index: 4;
+    }
+
+    .link-btn,
+    .service-text,
+    .service-title a,
+    .icon {
+      transition: all ease 0.4s;
+      color: $white-color;
+    }
+    
+
+
+    &:hover {
+      .service-text {
+        color: $body-color;  
+      }
+
+      &:after {
+        height: 100%;
+        width: 100%;
+      }
+
+
+      .service-title a {
+        color: $title-color;
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+
+      .link-btn,
+      .icon {
+        color: $theme-color;
+      }
+
+      
+    }
+  }
+}
+
+
+
+@include lg {
+  .service-card {
+    .title-box {
+      left: 20px;
+      right: 20px;
+      padding: 25px 0;
+    }
+
+    .service-text {
+      max-width: 280px;
+    }
+  }
+}
